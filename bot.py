@@ -13,14 +13,14 @@ dp = Dispatcher()
 
 @dp.message()
 async def trigger(message: types.Message):
-    if message.from_user and message.from_user.id == TARGET_USER_ID:
+    # Реагируем ТОЛЬКО на конкретного человека
+    if message.from_user and message.from_user.id == 532562432:   # ←←← ID Григория
         video = random.choice(VIDEO_FILES)
         if os.path.exists(video):
             with open(video, 'rb') as v:
-                await message.reply_video(v, caption="Гриша написал — всем привет от него!")
+                await message.reply_video(v, caption="Григорий написал — всем пиздец видео!")
         else:
-            await message.answer("Видео пока нет, но я уже готовлю сюрприз…")
-
+            await message.answer("Видео пропало, но я всё равно его ищу… 😈")
 async def main():
     print("Бот запущен и ждёт Гришу…")
     await dp.start_polling(bot)
