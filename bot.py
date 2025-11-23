@@ -4,7 +4,7 @@ import random
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters import Command
 
-API_TOKEN = '7636498052:AAH9M_7P8cW9eK8z9YcX7vB6nL5mK4jH3gF'
+API_TOKEN = '8511878227:AAGDbfxtt3JIBK5lV4bqjTskRmcE7vn_tsI'
 TARGET_USER_ID = 532562432                      # ← ID того, на кого реагируем
 VIDEO_FILES = ['pisy.mp4']
 
